@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="/img/icon16.png" sizes="16x16">
+    <link rel="icon" href="/img/icon32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <title>Front-End Test</title>
+    <script src="https://kit.fontawesome.com/287734033d.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <div class="container">
+
+      <!------------ Profile ------------>
+
+      <div class="profile-row">
+        <img src="/img/profile.png" class="icon" />
+        <div>
+          <h2>Jorge Guerrero</h2>
+          <h3>Buenos Aires, Argentina</h3>
+        </div>
+      </div>
+
+      <!------------ Photo Carousel ------------>
+      
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="https://picsum.photos/1280/720?random=1" alt="photo1" class="photo"/></div>
+          <div class="swiper-slide"><img src="https://picsum.photos/1280/720?random=2" alt="photo2" class="photo"/></div>
+          <div class="swiper-slide"><img src="https://picsum.photos/1280/720?random=3" alt="photo3" class="photo"/></div>
+          <div class="swiper-slide"><img src="https://picsum.photos/1280/720?random=4" alt="photo4" class="photo"/></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      
+      <!------------ Icons ------------>
+      
+      <div class="icons-row">
+        <a onclick="myFunction()" class="fa-regular fa-heart" id="heart"></a><a class="fa-regular fa-comment"></a><a class="fa-regular fa-paper-plane"></a>
+      </div>
+      
+      <!------------ Caption ------------>
+      
+      <div class="caption-row">
+        <p class="text">
+          <em>Jorge Guerrero</em> Hello! This is my test project for Colored Byte!
+        </p>
+      </div>
+      
+      <!------------ Comments ------------>
+      
+      <div class="comments-row" id="comments">
+        <p class="text" id="comment">
+          <em>Comment</em> it's decent
+        </p>
+      </div>
+      
+      <!------------ Comment Box ------------>
+      
+      <div class="write-row">
+        <form>
+          <input
+              type="text"
+              name="comment"
+              placeholder="Write a comment">
+              <button type="submit" >Post</button>
+          </input>
+        </form>
+      </div>
+    </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

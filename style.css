@@ -1,0 +1,185 @@
+/*------------------ Page config ------------------*/
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  background-color: rgb(236, 236, 236);
+  margin: 20px;
+}
+
+.container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: -1px 7px 8px -5px rgba(0, 0, 0, 0.14);
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+/*------------------ Profile ------------------*/
+
+.profile-row {
+  display: flex;
+  flex-direction: row;
+}
+.profile-row img {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  padding: 15px 25px 10px;
+}
+.profile-row h2 {
+  font-size: 1em;
+  font-weight: 500;
+  margin: 21px 0 9px 0;
+}
+.profile-row h3 {
+  font-size: 0.72em;
+  font-weight: 400;
+  margin: 0 0 16px 0;
+}
+
+/*------------------ Photo Carousel ------------------*/
+
+.photo {
+  width: 100%;
+}
+.swiper {
+  width: 100%;
+  --swiper-theme-color: #ffffff;
+}
+
+/*------------------ Icons ------------------*/
+
+.icons-row {
+  padding: 18px 25px;
+  font-size: 1.5em;
+}
+.fa-regular {
+  cursor: pointer;
+  margin-right: 12px;
+  transition: all 0.15s;
+}
+.fa-heart:hover {
+  color: #ed4956;
+}
+.fa-comment:hover,
+.fa-paper-plane:hover {
+  color: #7a7a7a;
+}
+.fa-solid {
+  color: #ed4956;
+}
+.fa-solid:active,
+.fa-heart:active {
+  transform: scale(1.3);
+}
+
+/*------------------ Caption ------------------*/
+
+.text {
+  font-weight: 400;
+  font-size: 0.85em;
+  padding: 0 25px 0 25px;
+  margin-bottom: 22px;
+}
+.text em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+/*------------------ Comments ------------------*/
+
+.comments-row {
+  height: 200px;
+  overflow-y: auto;
+}
+.comments-row p {
+  margin: 0 0 10px;
+}
+
+/*------------------ Comment Box ------------------*/
+
+.write-row {
+  margin-top: auto;
+  margin-bottom: 24px;
+}
+form {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+input {
+  width: 70%;
+  padding-left: 15px;
+  height: 55px;
+  border-radius: 5px 0 0 5px;
+  transition: all 0.15s;
+}
+input:focus {
+  background-color: #e0e0e0;
+}
+button,
+button:link {
+  border-radius: 0 5px 5px 0;
+  color: #3d8aff;
+  font-weight: 700;
+  padding-right: 15px;
+  transition: all 0.15s;
+}
+button:hover {
+  cursor: pointer;
+  color: #306bc5;
+}
+form button,
+input {
+  font-family: 'Inter';
+  border: none;
+  outline: none;
+  background: #f1f1f1;
+}
+
+/*------------------ Media Queries ------------------*/
+
+@media (min-width: 1024px) {
+  html {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 0.5fr) 2fr repeat(2, 0.3fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .swiper {
+    align-self: center;
+    grid-area: 1 / 1 / 6 / 4;
+  }
+  .profile-row {
+    grid-area: 1 / 4 / 2 / 6;
+  }
+  .caption-row {
+    grid-area: 2 / 4 / 3 / 6;
+  }
+  .comments-row {
+    grid-area: 3 / 4 / 4 / 6;
+  }
+  .icons-row {
+    grid-area: 4 / 4 / 5 / 6;
+  }
+  .write-row {
+    grid-area: 5 / 4 / 6 / 6;
+  }
+  form {
+    margin-top: 0;
+  }
+}
